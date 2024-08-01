@@ -11,13 +11,15 @@ body {
 h2 {
     font-size: 3em;
     font-style: italic;
-    color: azure;
+    color:  rgb(255, 228, 147);
+    font-family: 'Times New Roman', Times, serif;
 }
 
 
 p {
-    color: azure;
+    color: rgb(255, 228, 147);
     font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
     
   
 }
