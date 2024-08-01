@@ -1,7 +1,7 @@
 // Variebles 
 
-let firstCard = 1
-let secondCard = 1
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 let hasBlackJack = false
@@ -17,7 +17,9 @@ function startGame(){
     renderGame()
 }
 
-
+function getRandomCard () {            //Added so a random card is rendered
+    return Math.floor(Math.random()*13 + 1 )
+}
 
 
 
@@ -46,7 +48,7 @@ messageEl.textContent = message
 // second button
 
 function newCard() {
-    let card = 7
+    let card = getRandomCard
     sum += card
     cards.push(card)    //pushed to array
     renderGame()
