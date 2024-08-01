@@ -33,6 +33,7 @@ h1 {
 
 
 
+
 .type {
      line-height: 5px;    /*Addd this to adjust for all words.*/
     
@@ -48,6 +49,7 @@ button {
     background: antiquewhite;
     font-weight: bold;
     font-size: 2rem;
+    margin-bottom: 4px;
 
 }
 
