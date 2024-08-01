@@ -4,19 +4,22 @@ let firstCard = 15
 let secondCard = 9
 let sum = firstCard + secondCard
 let hasBlackJack = false
+let isAlive = true
+let message =""
 
 //  Create If - else conditions
 
 
 if (sum < 21) {
-    console.log("Do you want to draw a new card? 🧐")
+    message = "Do you want to draw a new card? 🧐"
+    isAlive = false
 }  else if (sum === 21 ) {
-    console.log("Woohoo! You've got BlackJack!! 🤩")
+    message = "Woohoo! You've got BlackJack!! 🤩"
     hasBlackJack = true
 }  else if (sum > 21) {
-     console.log("You Lose 😭")
+     message = "You Lose 😭"
+     isAlive = false
 }
 
 
-// Cash Out 
-
+console.log(message)
