@@ -9,6 +9,16 @@ let messageEl = document.getElementById("message-el")   // Make message show on 
 let sumEl = document.getElementById ("sum-el")    // make sum display
 let cardsEl = document.getElementById ("card-el")  // make cards display
 
+// Object creation
+
+let player = {
+    name: "Per",
+    chips: 145
+}
+
+let playerEl = document.getElementById("player-el")
+playerEl.textContent = player.name + ": $" + player.chips
+
 //  Create If - else conditions
 
 
@@ -57,8 +67,10 @@ if (sum <= 21) {
 // second button
 
 function newCard() {
+    if (isAlive === true && hasBlackJack === false ) {        //Stops dealer from giving more cards
     let card = getRandomCard()
     sum += card
     cards.push(card)    //pushed to array
     renderGame()
+}
 }
