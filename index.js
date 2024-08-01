@@ -1,11 +1,9 @@
 // Variebles 
 
-let firstCard = getRandomCard()
-let secondCard = getRandomCard()
-let cards = [firstCard, secondCard]
-let sum = firstCard + secondCard
+let cards = []
+let sum = 0
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 let message =""
 let messageEl = document.getElementById("message-el")   // Make message show on website
 let sumEl = document.getElementById ("sum-el")    // make sum display
@@ -13,21 +11,26 @@ let cardsEl = document.getElementById ("card-el")  // make cards display
 
 //  Create If - else conditions
 
-function startGame(){
-    renderGame()
-}
 
-function getRandomCard () {            //Added so a random card is rendered
-    let randomNumber = Math.floor( Math.random()*13 ) + 1 
-       if (randomNumber > 10) {
+ function getRandomCard () {            //Added so a random card is rendered
+    let randomNumer = Math.floor( Math.random()*13 ) + 1 
+       if (randomNumer > 10) {                //added this so K,Q,J gives an answer of 10
          return 10
-       } else if (randomNumber === 1){
+       } else if (randomNumer === 1){         //added this so ace equals 11
         return 11
        } else {
-        return randomNumber
+        return randomNumer
        }
-}
+    }
 
+function startGame(){
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
+    renderGame()
+}
 
 
 
@@ -40,22 +43,21 @@ function renderGame() {
     sumEl.textContent = "Sum: " + sum
 if (sum <= 21) {
     message = "Do you want to draw a new card? 🧐"
-    isAlive = false
 }  else if (sum === 21 ) {
     message = "You've got BlackJack!! 🤩"
     hasBlackJack = true
-}  else if (sum > 21) {
+}  else {
      message = "You Lose 😭"
      isAlive = false
 }
 
-messageEl.textContent = message
+    messageEl.textContent = message
 }
 
 // second button
 
 function newCard() {
-    let card = getRandomCard
+    let card = getRandomCard()
     sum += card
     cards.push(card)    //pushed to array
     renderGame()
