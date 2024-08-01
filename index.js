@@ -9,7 +9,7 @@ let message =""
 
 //  Create If - else conditions
 
-
+function startGame() {
 if (sum < 21) {
     message = "Do you want to draw a new card? 🧐"
     isAlive = false
@@ -21,5 +21,5 @@ if (sum < 21) {
      isAlive = false
 }
 
-
 console.log(message)
+}
