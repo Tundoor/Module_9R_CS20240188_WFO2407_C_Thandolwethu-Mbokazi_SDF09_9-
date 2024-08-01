@@ -35,3 +35,7 @@ if (sum < 21) {
 
 messageEl.textContent = message
 }
+
+function newCard() {
+    console.log("Drawinng a new Card")
+}
