@@ -1,5 +1,40 @@
 body {
     background-image: url("./images/table.png");
     background-size: cover;
+    justify-content: center;
+    text-align: center;
+
+}
+
+/* Typography */
+
+h2 {
+    font-size: 3em;
+    font-style: italic;
+    color: azure;
+}
+
+
+p {
+    color: azure;
+    font-size: 3rem;
+    
   
 }
+
+h1 {
+    color: azure;
+    font-size: 5rem;
+    font-family: fantasy;
+    letter-spacing: 1rem;
+}
+
+
+
+.type {
+     line-height: 5px;    /*Addd this to adjust for all words.*/
+    
+}
+
+
+
