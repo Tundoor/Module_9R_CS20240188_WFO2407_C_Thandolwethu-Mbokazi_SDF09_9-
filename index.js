@@ -10,9 +10,18 @@ let message =""
 // Make message show on website
 let messageEl = document.getElementById("message-el")
 
+// make sum display
+let sumEl = document.getElementById ("sum-el")
+// make cards display
+let cardsEl = document.getElementById ("card-el")  
+
 //  Create If - else conditions
 
 function startGame() {
+    //Added so sum and card renders on page
+    sumEl.textContent = "Sum: " + sum
+    //added so cards render
+    cardsEl.textContent = "Cards: " + firstCard + "" + secondCard
 if (sum < 21) {
     message = "Do you want to draw a new card? 🧐"
     isAlive = false
