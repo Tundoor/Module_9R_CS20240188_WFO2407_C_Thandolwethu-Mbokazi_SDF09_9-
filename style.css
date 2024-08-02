@@ -49,7 +49,15 @@ button {
     background: antiquewhite;
     font-weight: bold;
     font-size: 2rem;
+    font-weight: 300;
     margin-bottom: 4px;
+    border: none;
+    border-radius: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
 
 }
 
+button:hover {
+    background-color:rgb(253, 216, 168) ;
+}

@@ -52,12 +52,12 @@ function renderGame() {
 
     sumEl.textContent = "Sum: " + sum
 if (sum <= 21) {
-    message = "Do you want to draw a new card? 🧐"
+    message = "Do you want to draw a new card?"
 }  else if (sum === 21 ) {
-    message = "You've got BlackJack!! 🤩"
+    message = "You've got BlackJack!!"
     hasBlackJack = true
 }  else {
-     message = "You Lose 😭"
+     message = "You Lose!"
      isAlive = false
 }
 
