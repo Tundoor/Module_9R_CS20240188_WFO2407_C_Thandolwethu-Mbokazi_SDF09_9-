@@ -12,7 +12,7 @@ let cardsEl = document.getElementById ("card-el")  // make cards display
 // Object creation
 
 let player = {
-    name: "Per",
+    name: "User",
     chips: 145
 }
 
